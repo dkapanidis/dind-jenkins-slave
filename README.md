@@ -26,7 +26,7 @@ Run Docker-in-Docker Jenkins Slave
 To run the Docker-in-Docker Jenkins Slave:
 
 ```
-docker run --privileged --link=jenkins:master -v /var/run/docker.sock:/var/run/docker.sock -d spiddy/dind-jenkins-slave bash
+docker run --privileged --link=jenkins:master -v /var/run/docker.sock:/var/run/docker.sock -d spiddy/dind-jenkins-slave
 ```
 
 It will:
