@@ -10,4 +10,5 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
   apt-get install -y oracle-java7-installer
 
 RUN apt-get install -y make
-
+RUN wget http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/1.16/swarm-client-1.16-jar-with-dependencies.jar
+CMD java -jar swarm-client-1.16-jar-with-dependencies.jar -master http://$MASTER_PORT_8080_TCP_ADDR:$MASTER_PORT_8080_TCP_PORT
