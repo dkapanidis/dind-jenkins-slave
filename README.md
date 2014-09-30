@@ -3,7 +3,7 @@ dind-jenkins-slave
 
 Docker-in-Docker Jenkins Slave
 
-[![Docker Container](http://img.shields.io/badge/container-spiddy%2Fdind--jenkins--slave-blue.svg)](https://registry.hub.docker.com/u/spiddy/dind-jenkins-slave/)
+[![Docker Container](http://dockeri.co/image/spiddy/dind-jenkins-slave)](https://registry.hub.docker.com/u/spiddy/dind-jenkins-slave/)
 
 Contains:
 
