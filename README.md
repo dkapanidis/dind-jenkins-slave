@@ -9,8 +9,9 @@ Contains:
 
 * Docker
 * Java
+* Fig
 
-Can be used as Jenkins slave that can launch containers.
+Can be used as Jenkins slave that can launch containers with docker or fig.
 
 Requirements
 ------------
