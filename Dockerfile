@@ -12,6 +12,6 @@ RUN apt-get update -qq && \
   apt-get clean
 
 RUN apt-get install -y make
-RUN wget -q https://github.com/docker/fig/releases/download/0.5.2/linux -O /usr/local/bin/fig && chmod +x /usr/local/bin/fig
-RUN wget -q http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/1.16/swarm-client-1.16-jar-with-dependencies.jar
-CMD java -jar swarm-client-1.16-jar-with-dependencies.jar -master http://$MASTER_PORT_8080_TCP_ADDR:$MASTER_PORT_8080_TCP_PORT $EXTRA_PARAMS
+RUN wget -q https://github.com/docker/fig/releases/download/1.0.0/fig-Linux-x86_64 -O /usr/local/bin/fig && chmod +x /usr/local/bin/fig
+RUN wget -q http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/1.17/swarm-client-1.17-jar-with-dependencies.jar
+CMD java -jar swarm-client-1.17-jar-with-dependencies.jar -master http://$MASTER_PORT_8080_TCP_ADDR:$MASTER_PORT_8080_TCP_PORT $EXTRA_PARAMS
