@@ -10,7 +10,7 @@ Contains:
 * Docker
 * Java
 * Fig 1.0.1 - this is kept for backward compatibility for some time
-* Compose 1.2.0
+* Compose 1.3.0
 
 Can be used as Jenkins slave that can launch containers with docker or fig.
 
