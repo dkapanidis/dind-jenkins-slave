@@ -13,7 +13,7 @@ Contains:
 * [Fig](http://www.fig.sh/) 1.0.1 - this is kept for backward compatibility for some time
 * [Captain](https://github.com/harbur/captain) 0.5.0
 
-Can be used as Jenkins slave that can launch containers with docker or fig.
+Can be used as Jenkins slave that can compile containers with Captain and run with docker or docker-compose.
 
 Requirements
 ------------
