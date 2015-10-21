@@ -11,7 +11,7 @@ Contains:
 * [Docker](https://github.com/docker/docker)
 * [Docker Compose](https://github.com/docker/compose) 1.3.3
 * [Fig](http://www.fig.sh/) 1.0.1 - this is kept for backward compatibility for some time
-* [Captain](https://github.com/harbur/captain) 0.5.0
+* [Captain](https://github.com/harbur/captain) 0.7.0
 
 Can be used as Jenkins slave that can compile containers with Captain and run with docker or docker-compose.
 
