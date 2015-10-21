@@ -1,0 +1,14 @@
+master:
+  image: jenkins:1.625.1
+  ports:
+    - "8080:8080"
+  volumes:
+    - /opt/jenkins:/var/jenkins_home
+slave:
+  image: spiddy/dind-jenkins-slave:latest
+  links:
+    - master:master
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /jenkins
+  privileged: true
