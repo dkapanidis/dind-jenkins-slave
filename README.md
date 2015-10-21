@@ -68,3 +68,33 @@ Example:
 ```
 docker run --privileged --link=jenkins:master -v /var/run/docker.sock:/var/run/docker.sock -e EXTRA_PARAMS="-description 'Jenkins Slave' -executors 2" -d spiddy/dind-jenkins-slave
 ```
+
+# Run A Jenkins Master + Slave
+
+To run a complete Jenkins Master + Slave pack, clone this project and use docker-compose inside the clonned directory:
+
+```
+docker-compose up -d
+```
+
+If you get a permissions error on startup, you need to give ownership to uid 1000 the /opt/jenkins directory where the docker engine runs.
+
+For example if you use docker-machine and your machine name is 'dev', do:
+
+```
+docker-machine ssh dev 'chown -R 1000:1000 /opt/jenkins'
+```
+
+Once the stack is up with docker-compose (master+slave) then open a browser on port 8080 to connect with Jenkins:
+- Manage Jenkins -> Manage Plugins -> Available: Install "Self-Organizing Swarm Plug-in Modules" (no restart needed)
+
+Once install is finished, the slave will automatically be connected.
+
+To test it:
+- Create new Jobs -> Freestyle project
+  - Restrict where this project can be run: swarm
+  - Add Build Step -> Execute Shell: docker ps
+- Build Now
+
+On the job result you'll be able to see that slave has connected with the docker engine and shows the running containers.
+
